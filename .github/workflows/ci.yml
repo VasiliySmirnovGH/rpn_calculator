@@ -11,3 +11,9 @@ jobs:
     # ШАГ 1: Работает?
     - name: Step 1 - Basic test
       run: echo "CI is working"
+
+    # ШАГ 2: Добавьте этот блок и проверьте
+    - name: Step 2 - Install deps
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake

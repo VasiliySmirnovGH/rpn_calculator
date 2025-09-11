@@ -1,9 +1,13 @@
-name: C++ CI
-on: [push, pull_request]
+name: CI Debug
+
+on: [push]
+
 jobs:
-build-and-test:
-runs-on: ubuntu-latest
-steps: - name: Checkout code
-uses: actions/checkout@v3 - name: Install dependencies
-run: |
-sudo apt-get update
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    # ШАГ 1: Работает?
+    - name: Step 1 - Basic test
+      run: echo "CI is working"

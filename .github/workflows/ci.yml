@@ -1,38 +1,26 @@
-name: CI for RPN Calculator
+name: CI Debug
 
-on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+on: [push]
 
 jobs:
-  build-and-test:
+  debug:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+    - uses: actions/checkout@v4
 
-    - name: Install dependencies
+    # ШАГ 1: Работает?
+    - name: Step 1 - Basic test
+      run: echo "CI is working"
+
+    # ШАГ 2: Добавьте этот блок и проверьте
+    - name: Step 2 - Install deps
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential cmake libgtest-dev
+        sudo apt-get install -y build-essential cmake
 
-    - name: Configure with CMake
+    # ШАГ 4: Добавьте и проверьте
+    - name: Step 4 - Configure
       run: |
         mkdir build
         cd build
         cmake ..
-
-    - name: Build project
-      run: |
-        cd build
-        make -j4
-
-    - name: Run tests
-      run: |
-        cd build
-        ./tests/rpn_tests

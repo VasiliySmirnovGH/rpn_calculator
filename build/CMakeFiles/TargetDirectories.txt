@@ -1,5 +1,0 @@
-/home/smi/rpn_calculator/build/CMakeFiles/rpn_calculator.dir
-/home/smi/rpn_calculator/build/CMakeFiles/rpn_tests.dir
-/home/smi/rpn_calculator/build/CMakeFiles/test.dir
-/home/smi/rpn_calculator/build/CMakeFiles/edit_cache.dir
-/home/smi/rpn_calculator/build/CMakeFiles/rebuild_cache.dir

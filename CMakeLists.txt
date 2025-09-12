@@ -16,7 +16,7 @@ target_include_directories(rpn_calculator PRIVATE ${CMAKE_SOURCE_DIR}/include)
 # Тесты
 add_executable(rpn_tests tests/test_rpn.cpp)
 target_include_directories(rpn_tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
-target_include_directories(rpn_tests PRIVATE
+target_include_directories(rpn_tests PRIVATE)
     ${CMAKE_SOURCE_DIR}/include
     /usr/include/gtest
 

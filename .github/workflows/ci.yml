@@ -18,16 +18,19 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential cmake
+
     - name: Configure with CMake
       run: |
         mkdir build
         cd build
         cmake ..
+
     - name: Build project
       run: |
         cd build
         cmake --build .
+
     - name: Run tests
       run: |
         cd build
-        ./tests/rpn_tests
+        ctest --output-on-failure

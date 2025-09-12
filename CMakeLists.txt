@@ -1,15 +1,24 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.14)
 project(RPN_Calculator)
 
-set(CMAKE_CXX_STANDARD 17)
+# Автоматически загружаем Google Test
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9fd718599d30c5a4435c5c8.zip
+)
+FetchContent_MakeAvailable(googletest)
 
-# Главная программа
+# Ваш основной target
 add_executable(rpn_calculator src/main.cpp src/rpn.cpp)
+target_include_directories(rpn_calculator PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
-# Тесты (если есть папка tests)
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rpn.cpp)
-    enable_testing()
-    add_executable(rpn_tests tests/test_rpn.cpp src/rpn.cpp)
-    target_link_libraries(rpn_tests PRIVATE gtest_main)
-    target_include_directories(rpn_calculator PRIVATE ${CMAKE_SOURCE_DIR}/include)
-endif()
+# Тесты
+add_executable(rpn_tests tests/test_rpn.cpp)
+target_include_directories(rpn_tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(rpn_tests PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    /usr/include/gtest
+
+# Линкуем с gtest
+target_link_libraries(rpn_tests PRIVATE gtest_main)

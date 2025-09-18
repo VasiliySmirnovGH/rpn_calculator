@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['evaluate_5frpn_0',['evaluate_rpn',['../rpn_8cpp.html#a2f676f7d3bb9c61406f9cf7524889c60',1,'rpn.cpp']]]
+  ['clear_5fvariables_0',['clear_variables',['../rpn_8h.html#a97c353c23050b2faebd883435f73aa6e',1,'clear_variables():&#160;rpn.cpp'],['../rpn_8cpp.html#a97c353c23050b2faebd883435f73aa6e',1,'clear_variables():&#160;rpn.cpp']]]
 ];

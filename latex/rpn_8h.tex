@@ -1,0 +1,76 @@
+\doxysection{include/rpn.h File Reference}
+\hypertarget{rpn_8h}{}\label{rpn_8h}\index{include/rpn.h@{include/rpn.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for rpn.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{rpn_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{rpn_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{rpn_8h_a56be429255d682ade59a81e806b07752}{evaluate\+\_\+rpn}} (const std\+::string \&expression)
+\item 
+void \mbox{\hyperlink{rpn_8h_a12687a209113703df7fbdbcd9c1de268}{set\+\_\+variable}} (const std\+::string \&name, double value)
+\item 
+double \mbox{\hyperlink{rpn_8h_a6742f1309bdc52b513efd946fbfc0453}{get\+\_\+variable}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{rpn_8h_a97c353c23050b2faebd883435f73aa6e}{clear\+\_\+variables}} ()
+\item 
+double \mbox{\hyperlink{rpn_8h_a86b2afa43e68f1358917f965d699efbf}{factorial}} (double n)
+\item 
+double \mbox{\hyperlink{rpn_8h_a630f46099b43e82f865e5da51d6e7a23}{power}} (double base, double exponent)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rpn_8h_a97c353c23050b2faebd883435f73aa6e}\label{rpn_8h_a97c353c23050b2faebd883435f73aa6e} 
+\index{rpn.h@{rpn.h}!clear\_variables@{clear\_variables}}
+\index{clear\_variables@{clear\_variables}!rpn.h@{rpn.h}}
+\doxysubsubsection{\texorpdfstring{clear\_variables()}{clear\_variables()}}
+{\footnotesize\ttfamily void clear\+\_\+variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8h_a56be429255d682ade59a81e806b07752}\label{rpn_8h_a56be429255d682ade59a81e806b07752} 
+\index{rpn.h@{rpn.h}!evaluate\_rpn@{evaluate\_rpn}}
+\index{evaluate\_rpn@{evaluate\_rpn}!rpn.h@{rpn.h}}
+\doxysubsubsection{\texorpdfstring{evaluate\_rpn()}{evaluate\_rpn()}}
+{\footnotesize\ttfamily double evaluate\+\_\+rpn (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expression }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8h_a86b2afa43e68f1358917f965d699efbf}\label{rpn_8h_a86b2afa43e68f1358917f965d699efbf} 
+\index{rpn.h@{rpn.h}!factorial@{factorial}}
+\index{factorial@{factorial}!rpn.h@{rpn.h}}
+\doxysubsubsection{\texorpdfstring{factorial()}{factorial()}}
+{\footnotesize\ttfamily double factorial (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8h_a6742f1309bdc52b513efd946fbfc0453}\label{rpn_8h_a6742f1309bdc52b513efd946fbfc0453} 
+\index{rpn.h@{rpn.h}!get\_variable@{get\_variable}}
+\index{get\_variable@{get\_variable}!rpn.h@{rpn.h}}
+\doxysubsubsection{\texorpdfstring{get\_variable()}{get\_variable()}}
+{\footnotesize\ttfamily double get\+\_\+variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8h_a630f46099b43e82f865e5da51d6e7a23}\label{rpn_8h_a630f46099b43e82f865e5da51d6e7a23} 
+\index{rpn.h@{rpn.h}!power@{power}}
+\index{power@{power}!rpn.h@{rpn.h}}
+\doxysubsubsection{\texorpdfstring{power()}{power()}}
+{\footnotesize\ttfamily double power (\begin{DoxyParamCaption}\item[{double}]{base,  }\item[{double}]{exponent }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8h_a12687a209113703df7fbdbcd9c1de268}\label{rpn_8h_a12687a209113703df7fbdbcd9c1de268} 
+\index{rpn.h@{rpn.h}!set\_variable@{set\_variable}}
+\index{set\_variable@{set\_variable}!rpn.h@{rpn.h}}
+\doxysubsubsection{\texorpdfstring{set\_variable()}{set\_variable()}}
+{\footnotesize\ttfamily void set\+\_\+variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['evaluate_5frpn_0',['evaluate_rpn',['../rpn_8h.html#a56be429255d682ade59a81e806b07752',1,'evaluate_rpn(const std::string &amp;expression):&#160;rpn.cpp'],['../rpn_8cpp.html#a56be429255d682ade59a81e806b07752',1,'evaluate_rpn(const std::string &amp;expression):&#160;rpn.cpp']]]
 ];

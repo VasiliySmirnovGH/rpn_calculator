@@ -1,12 +1,14 @@
 \doxysection{src/rpn.cpp File Reference}
 \hypertarget{rpn_8cpp}{}\label{rpn_8cpp}\index{src/rpn.cpp@{src/rpn.cpp}}
 {\ttfamily \#include "{}rpn.\+h"{}}\newline
-{\ttfamily \#include $<$stack$>$}\newline
-{\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$cmath$>$}\newline
-{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
 Include dependency graph for rpn.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -18,14 +20,76 @@ Include dependency graph for rpn.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{rpn_8cpp_a2f676f7d3bb9c61406f9cf7524889c60}{evaluate\+\_\+rpn}} (const string \&expression)
+double \mbox{\hyperlink{rpn_8cpp_a86b2afa43e68f1358917f965d699efbf}{factorial}} (double n)
+\item 
+double \mbox{\hyperlink{rpn_8cpp_a630f46099b43e82f865e5da51d6e7a23}{power}} (double base, double exponent)
+\item 
+double \mbox{\hyperlink{rpn_8cpp_a56be429255d682ade59a81e806b07752}{evaluate\+\_\+rpn}} (const std\+::string \&expression)
+\item 
+void \mbox{\hyperlink{rpn_8cpp_a12687a209113703df7fbdbcd9c1de268}{set\+\_\+variable}} (const std\+::string \&name, double value)
+\item 
+double \mbox{\hyperlink{rpn_8cpp_a6742f1309bdc52b513efd946fbfc0453}{get\+\_\+variable}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{rpn_8cpp_a97c353c23050b2faebd883435f73aa6e}{clear\+\_\+variables}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{rpn_8cpp_abc38a725b490a30bcce6d570b91aaa71}{variables}}
+\item 
+std\+::stack$<$ double $>$ \mbox{\hyperlink{rpn_8cpp_af0cb17db3a87874283a458715a269ca0}{history\+\_\+stack}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{rpn_8cpp_a2f676f7d3bb9c61406f9cf7524889c60}\label{rpn_8cpp_a2f676f7d3bb9c61406f9cf7524889c60} 
+\Hypertarget{rpn_8cpp_a97c353c23050b2faebd883435f73aa6e}\label{rpn_8cpp_a97c353c23050b2faebd883435f73aa6e} 
+\index{rpn.cpp@{rpn.cpp}!clear\_variables@{clear\_variables}}
+\index{clear\_variables@{clear\_variables}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{clear\_variables()}{clear\_variables()}}
+{\footnotesize\ttfamily void clear\+\_\+variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8cpp_a56be429255d682ade59a81e806b07752}\label{rpn_8cpp_a56be429255d682ade59a81e806b07752} 
 \index{rpn.cpp@{rpn.cpp}!evaluate\_rpn@{evaluate\_rpn}}
 \index{evaluate\_rpn@{evaluate\_rpn}!rpn.cpp@{rpn.cpp}}
 \doxysubsubsection{\texorpdfstring{evaluate\_rpn()}{evaluate\_rpn()}}
-{\footnotesize\ttfamily double evaluate\+\_\+rpn (\begin{DoxyParamCaption}\item[{const string \&}]{expression }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double evaluate\+\_\+rpn (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expression }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8cpp_a86b2afa43e68f1358917f965d699efbf}\label{rpn_8cpp_a86b2afa43e68f1358917f965d699efbf} 
+\index{rpn.cpp@{rpn.cpp}!factorial@{factorial}}
+\index{factorial@{factorial}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{factorial()}{factorial()}}
+{\footnotesize\ttfamily double factorial (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8cpp_a6742f1309bdc52b513efd946fbfc0453}\label{rpn_8cpp_a6742f1309bdc52b513efd946fbfc0453} 
+\index{rpn.cpp@{rpn.cpp}!get\_variable@{get\_variable}}
+\index{get\_variable@{get\_variable}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_variable()}{get\_variable()}}
+{\footnotesize\ttfamily double get\+\_\+variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8cpp_a630f46099b43e82f865e5da51d6e7a23}\label{rpn_8cpp_a630f46099b43e82f865e5da51d6e7a23} 
+\index{rpn.cpp@{rpn.cpp}!power@{power}}
+\index{power@{power}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{power()}{power()}}
+{\footnotesize\ttfamily double power (\begin{DoxyParamCaption}\item[{double}]{base,  }\item[{double}]{exponent }\end{DoxyParamCaption})}
+
+\Hypertarget{rpn_8cpp_a12687a209113703df7fbdbcd9c1de268}\label{rpn_8cpp_a12687a209113703df7fbdbcd9c1de268} 
+\index{rpn.cpp@{rpn.cpp}!set\_variable@{set\_variable}}
+\index{set\_variable@{set\_variable}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_variable()}{set\_variable()}}
+{\footnotesize\ttfamily void set\+\_\+variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{rpn_8cpp_af0cb17db3a87874283a458715a269ca0}\label{rpn_8cpp_af0cb17db3a87874283a458715a269ca0} 
+\index{rpn.cpp@{rpn.cpp}!history\_stack@{history\_stack}}
+\index{history\_stack@{history\_stack}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{history\_stack}{history\_stack}}
+{\footnotesize\ttfamily std\+::stack$<$double$>$ history\+\_\+stack}
+
+\Hypertarget{rpn_8cpp_abc38a725b490a30bcce6d570b91aaa71}\label{rpn_8cpp_abc38a725b490a30bcce6d570b91aaa71} 
+\index{rpn.cpp@{rpn.cpp}!variables@{variables}}
+\index{variables@{variables}!rpn.cpp@{rpn.cpp}}
+\doxysubsubsection{\texorpdfstring{variables}{variables}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, double$>$ variables}
 
